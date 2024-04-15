@@ -35,6 +35,7 @@ class ViewModel {
         self.loadMoreWith(currentPage) {[weak self] photos in
             if photos.isEmpty {
                 completion()
+                return
             }
             
             self?.currentPage += 1            
